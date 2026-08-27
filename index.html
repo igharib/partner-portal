@@ -133,6 +133,10 @@
   }
   .country-card:hover { border-color: var(--teal-mid); background: var(--teal-light); transform: translateY(-2px); }
   .country-card .flag { font-size: 1.4rem; }
+  .country-card.expanding {
+    border-style: dashed; border-color: var(--teal-mid); background: var(--teal-light); color: var(--teal-dark);
+  }
+  .country-card.expanding:hover { border-color: var(--teal); transform: none; }
 
   /* ===== CATEGORIES ===== */
   .cat-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
@@ -309,6 +313,7 @@
         <div class="country-card"><span class="flag">🇵🇦</span> Panama</div>
         <div class="country-card"><span class="flag">🇱🇾</span> Libya</div>
         <div class="country-card"><span class="flag">🇦🇴</span> Angola</div>
+        <div class="country-card expanding"><span class="flag">🌍</span> Expanding soon</div>
       </div>
     </div>
   </section>
