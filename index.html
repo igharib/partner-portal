@@ -25,7 +25,7 @@
   }
 
   * { box-sizing: border-box; }
-  html { scroll-behavior: smooth; }
+  html { scroll-behavior: auto; }
   body {
     margin: 0;
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
@@ -37,7 +37,8 @@
   img { max-width: 100%; display: block; }
   a { color: inherit; }
   .wrap { max-width: 1160px; margin: 0 auto; padding: 0 28px; }
-  section { padding: clamp(40px, 6vw, 76px) 0; }
+  section { padding: clamp(40px, 6vw, 76px) 0; scroll-margin-top: 92px; }
+  #top { scroll-margin-top: 0; }
   h1, h2, h3, h4 { margin: 0; font-weight: 800; letter-spacing: -0.02em; }
   h2 { font-size: clamp(1.7rem, 3vw, 2.5rem); }
   h3 { font-size: 1.2rem; }
@@ -57,7 +58,7 @@
     text-decoration: none; border: none; cursor: pointer; transition: all 0.18s var(--ease);
     font-family: inherit;
   }
-  .btn-primary { background: var(--teal); color: #fff; box-shadow: 0 14px 30px rgba(0,196,204,0.28); }
+  .btn-primary { background: var(--teal); color: var(--text); box-shadow: 0 14px 30px rgba(0,196,204,0.28); }
   .btn-primary:hover { background: var(--teal-dark); transform: translateY(-1px); box-shadow: 0 18px 36px rgba(0,196,204,0.36); }
   .btn-outline { background: #fff; color: var(--text); border: 1.5px solid var(--border); }
   .btn-outline:hover { border-color: var(--teal); color: var(--teal-dark); }
@@ -86,7 +87,7 @@
   .hero-grid { display: grid; grid-template-columns: 1.05fr 0.95fr; gap: 48px; align-items: center; }
   @media (max-width: 900px) { .hero-grid { grid-template-columns: 1fr; } }
   .hero h1 { font-size: clamp(2.1rem, 4.2vw, 3.4rem); line-height: 1.08; margin-bottom: 18px; }
-  .hero h1 .accent { color: var(--teal); }
+  .hero h1 .accent { color: var(--teal-dark); }
   .hero-sub { font-size: 1.08rem; line-height: 1.65; max-width: 540px; margin-bottom: 30px; }
   .hero-ctas { display: flex; gap: 12px; flex-wrap: wrap; margin-bottom: 40px; }
   .hero-visual { position: relative; border-radius: 24px; overflow: hidden; box-shadow: 0 30px 70px rgba(15,23,42,0.16); }
@@ -185,7 +186,7 @@
   @media (max-width: 900px) { .forms-grid { grid-template-columns: 1fr; } }
   .form-card {
     border-radius: 22px; padding: 34px; border: 1px solid var(--border); background: #fff;
-    box-shadow: 0 20px 50px rgba(15,23,42,0.06);
+    box-shadow: 0 20px 50px rgba(15,23,42,0.06); scroll-margin-top: 92px;
   }
   .form-card.marketplace { border-top: 4px solid var(--teal); }
   .form-card.referral { border-top: 4px solid #0F172A; }
@@ -242,8 +243,8 @@
           <h1>Put your business in front of the families who matter most, <span class="accent">at zero upfront cost.</span></h1>
           <p class="hero-sub">Spare is the app parents at 250+ leading international schools already open every day, for payments, cafeteria, and school life. As a Partner, your products or referrals reach that same audience directly, with no upfront cost, ever.</p>
           <div class="hero-ctas">
-            <a href="#apply" class="btn btn-primary">Apply as a Marketplace Partner</a>
-            <a href="#apply" class="btn btn-outline">Apply as a Referral Partner</a>
+            <a href="#marketplace-form" class="btn btn-primary">Apply as a Marketplace Partner</a>
+            <a href="#referral-form" class="btn btn-outline">Apply as a Referral Partner</a>
           </div>
         </div>
         <div class="hero-visual">
